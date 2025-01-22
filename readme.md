@@ -1,3 +1,3 @@
+# Docs
 
-- Docusaurus tutorial
-  https://tutorial.docusaurus.io/docs/intro
+https://docs.tangible.one

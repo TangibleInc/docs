@@ -1,6 +1,6 @@
 # Plugin
 
-Here are some common folders and files for a WordPress plugin.
+Here are common folders and files for a WordPress plugin.
 
 ## Documentation
 
@@ -55,7 +55,9 @@ Folder structure is `namespace/project`.
 
 ### `package.json`
 
-Package configuration for NPM (Node package manager), Includes scripts to run and list of dependencies.
+Package configuration for NPM (Node package manager). Defines a list of dependencies, and scripts you can run with `npm run`.
+
+See [the Roller](/modules/roller) which bundles assets like JavaScript and CSS. For local development and testing, a tool called [Now](/modules/now) serves a self-contained site based on WordPress Playground.
 
 ### `tangible.config.js`
 
@@ -90,4 +92,17 @@ Language-specific preferences can be declared here.
 
 ### `.github`
 
-GitHub Actions pipeline to test, build, and deploy the project.
+GitHub Actions pipeline to test, build, and deploy the project. See [the Pipeline module](/modules/pipeline).
+
+### `.prettierrc`
+
+Formatter configuration for [Prettier](https://prettier.io/).
+
+```json
+{
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "useTabs": false
+}
+```

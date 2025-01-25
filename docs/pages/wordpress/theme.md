@@ -1,6 +1,10 @@
 # Theme
 
-WordPress requires a theme to have a file named `style.css` with a comment block as header.
+## Folders and files
+
+A themes shared many of the same common folders and files as a plugin.
+
+At the minimum, WordPress requires a theme to have a file named `style.css` with a comment block as header.
 
 ```css
 /*
@@ -29,4 +33,7 @@ Template: parent-theme
 ```
 
 
-See the [documentation for supported header fields](https://developer.wordpress.org/themes/core-concepts/main-stylesheet/#header-fields).
+Here is [the entire list of supported header fields](https://developer.wordpress.org/themes/core-concepts/main-stylesheet/#header-fields).
+
+- [WordPress Theme Handbook](https://developer.wordpress.org/themes) 
+- [Empty Block Theme](https://github.com/TangibleInc/empty-block-theme)

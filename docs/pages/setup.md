@@ -18,7 +18,5 @@ The following software is required for the projects in the documentation.
 
 Optionally, some projects or tasks may depend on:
 
-- [POSIX](https://en.wikipedia.org/wiki/List_of_POSIX_commands) (Portable Operating System Interface) commands
-- [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) compatible shell
+- [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) compatible shell and [POSIX](https://en.wikipedia.org/wiki/List_of_POSIX_commands) (Portable Operating System Interface) commands
 - [Docker Engine](https://docs.docker.com/engine/) for containerization
-- [Bun](https://bun.sh/)

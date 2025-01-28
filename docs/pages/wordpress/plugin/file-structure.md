@@ -1,4 +1,4 @@
-# Plugin
+# File structure
 
 Here are common folders and files for a WordPress plugin.
 

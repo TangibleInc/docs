@@ -1,14 +1,12 @@
 # Create
 
-Here's a quick way to start a new [WordPress](https://wordpress.org/) plugin, theme, or site.
+Here is a way to start a new [WordPress](https://wordpress.org/) plugin, theme, or site.
 
 ```sh
 npm create tangible@latest
 ```
 
-This installs a tool called `create-tangible` ([Git repository](https://github.com/tangibleinc/create)) and runs it.
-
-It asks some questions to create a new project.
+It runs a tool called `create-tangible` ([Git repository](https://github.com/tangibleinc/create)), which asks a few questions to start a new project.
 
 ```sh
 ? Select project type (Use arrow keys)
@@ -22,7 +20,7 @@ It asks some questions to create a new project.
 ? Project description
 ```
 
-It creates the project folder, and copies the contents of a starter template based on project type. It runs `npm install` for NPM packages, then `roll install` for module dependencies like Framework, Updater, and others for local development and testing.
+It creates the project folder, and copies the contents of a starter template based on project type. It runs `npm install` and `roll install` to prepare NPM packages and other dependencies like Framework and Updater .
 
 ```sh
 Create project "example"

@@ -16,26 +16,26 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "prism-react-renderer": "^2.4.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "prism-react-renderer": "^2.4.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
-    "@docusaurus/core": "3.6.3",
-    "@docusaurus/module-type-aliases": "3.6.3",
-    "@docusaurus/preset-classic": "3.6.3",
-    "@docusaurus/tsconfig": "3.6.3",
-    "@docusaurus/types": "3.6.3",
+    "@docusaurus/core": "3.7.0",
+    "@docusaurus/module-type-aliases": "3.7.0",
+    "@docusaurus/preset-classic": "3.7.0",
+    "@docusaurus/tsconfig": "3.7.0",
+    "@docusaurus/types": "3.7.0",
     "@mdx-js/react": "^3.1.0",
-    "@types/react": "^18.3.12",
-    "@types/react-transition-group": "^4.4.11",
-    "docusaurus-lunr-search": "^3.5.0",
-    "docusaurus-plugin-sass": "^0.2.5",
+    "@types/react": "18",
+    "@types/react-transition-group": "^4.4.12",
+    "docusaurus-lunr-search": "^3.6.0",
+    "docusaurus-plugin-sass": "^0.2.6",
     "globby": "^14.0.2",
-    "sass": "1.79.0",
+    "sass": "1.79.0 ",
     "tsx": "^4.19.2",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.3"
   },
   "peerDependencies": {
     "react": ">=18",

@@ -9,17 +9,19 @@ import { execSync } from 'child_process'
     install: [
       ...[
         'blocks',
-        // 'blocks-pro',
+        'blocks-pro',
         'design',
         'create',
         'fields',
-        // 'fields-pro',
+        'fields-pro',
         'framework',
         'now',
-        // 'loops-and-logic',
-        // 'loops-and-logic-pro',
+        'loops-and-logic',
+        'loops-and-logic-pro',
         'pipeline',
         'roller',
+        'template-system',
+        'template-system-pro',
         'update-server',
         'updater',
       ].map((name) => ({

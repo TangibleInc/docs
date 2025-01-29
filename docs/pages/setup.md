@@ -20,3 +20,8 @@ Optionally, some projects or tasks may depend on:
 
 - [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) compatible shell and [POSIX](https://en.wikipedia.org/wiki/List_of_POSIX_commands) (Portable Operating System Interface) commands
 - [Docker Engine](https://docs.docker.com/engine/) for containerization
+
+## References
+
+- [Block Editor Handbook: Node.js development environment](https://developer.wordpress.org/block-editor/getting-started/devenv/nodejs-development-environment/)
+

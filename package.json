@@ -4,6 +4,8 @@
   "scripts": {
     "start": "docusaurus start",
     "build": "docusaurus build",
+    "update": "tsx ./tools/update.ts",
+    "gen": "tsx ./tools/generate.ts",
     "docs": "docusaurus",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -30,7 +32,9 @@
     "@types/react-transition-group": "^4.4.11",
     "docusaurus-lunr-search": "^3.5.0",
     "docusaurus-plugin-sass": "^0.2.5",
+    "globby": "^14.0.2",
     "sass": "1.79.0",
+    "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   },
   "peerDependencies": {

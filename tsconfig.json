@@ -4,5 +4,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "allowImportingTsExtensions": true
-  }
+  },
+  "include": [
+    "docs",
+    "src"
+  ]
 }

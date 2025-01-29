@@ -13,8 +13,8 @@ The project consists of a set of plugins.
 - [Tangible Blocks](https://github.com/tangibleinc/blocks)
 - [Tangible Blocks Editor](https://github.com/tangibleinc/blocks-editor) - Enable block template editing in the admin
 - [Tangible Blocks Pro](https://github.com/tangibleinc/blocks-pro)
-- [Loops & Logic](https://github.com/tangibleinc/loops) - Basic variant with all template types except blocks. Published in the official plugin directory on `wp.org`.
-- [Loops & Logic Pro](https://github.com/tangibleinc/loops-pro)
+- [Loops & Logic](https://github.com/tangibleinc/loops-and-logic) - Basic variant with all template types except blocks. Published in the official plugin directory on `wp.org`.
+- [Loops & Logic Pro](https://github.com/tangibleinc/loops-and-logic-pro)
 
 ## Themes
 

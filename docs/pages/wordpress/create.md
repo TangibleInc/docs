@@ -37,4 +37,4 @@ cd example
 npm run start
 ```
 
-As indicated, change to the project directory and run the `start` script. This serves a self-contained local site running on WordPress Playground and PHP-WASM.
+As indicated, change to the project directory and run the `start` script. This serves a self-contained local site running on WordPress Playground.

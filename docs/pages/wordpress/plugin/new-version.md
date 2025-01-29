@@ -97,3 +97,17 @@ Define the `archive` property with the name of the zip package, what files to in
   }
 }
 ```
+
+## Git commands
+
+Add tag
+
+```sh
+git tag 1.0.0
+```
+
+Push tag
+
+```sh
+git push origin 1.0.0
+```

@@ -10,6 +10,7 @@ bun.lockb
 
 # Dependencies
 /node_modules
+/vendor
 
 # Production
 /build

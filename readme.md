@@ -1,3 +1,1 @@
-# Docs
-
-https://docs.tangible.one
+docs/pages/projects/docs.md

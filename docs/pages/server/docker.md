@@ -18,6 +18,12 @@ Stop the containers.
 docker compose down
 ```
 
+List running processes.
+
+```sh
+docker compose ps
+```
+
 ## Example configurations
 
 ### WordPress site

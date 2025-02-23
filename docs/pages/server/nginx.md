@@ -2,6 +2,26 @@
 
 [NGINX](https://nginx.org/en/) is a reverse proxy server, which forwards incoming client requests from web browsers to locally running applications and servers. [Apache](https://httpd.apache.org/) and [Caddy](https://caddyserver.com/) are popular alternatives.
 
+## Common commands
+
+Test if server and site configurations are valid.
+
+```sh
+sudo nginx -t
+```
+
+Restart NGINX service.
+
+```sh
+sudo systemctl restart nginx
+```
+
+Check the status of NGINX service.
+
+```sh
+sudo systemctl status nginx
+```
+
 ## Example configurations
 
 Change as needed: domain, server user, container port.

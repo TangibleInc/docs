@@ -77,19 +77,18 @@ Define the `archive` property with the name of the zip package, what files to in
       'readme.txt'
     ],
     exclude: [
+      'assets/src',
+      'docs',
+      'vendor/tangible-dev',
       '.git',
       '**/artifacts',
       '**/publish',
       '**/node_modules',
-      'assets/src',
-      'docs',
       '**/tests',
       '**/*.scss',
       '**/*.jsx',
       '**/*.ts',
       '**/*.tsx',
-      'vendor/tangible/*/vendor',
-      'vendor/tangible-dev/'
     ],
     configs: [
       // './vendor/tangible/example-module/tangible.config.js'

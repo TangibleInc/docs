@@ -4,7 +4,7 @@
   "scripts": {
     "start": "docusaurus start",
     "build": "docusaurus build",
-    "update": "tsx ./tools/update.ts",
+    "update": "tsx ./tools/install.ts",
     "gen": "tsx ./tools/generate.ts",
     "docs": "docusaurus",
     "swizzle": "docusaurus swizzle",

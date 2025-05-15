@@ -155,7 +155,7 @@ Missing or inapplicable fields are replaced with a dash "-". The logger extracts
 
 ### Extending the server
 
-To customize the way the update server works, create your own server class that extends [Wpup_UpdateServer](includes/Wpup/UpdateServer.php) and edit the init script (that's `index.php` if you're running the server as a standalone app) to load and use the new class.
+To customize the way the update server works, create your own server class that extends `Wpup_UpdateServer` and edit the init script (that's `index.php` if you're running the server as a standalone app) to load and use the new class.
 
 For example, lets make a simple modification that disables downloads and removes the download URL from the plugin details returned by the update API. This could serve as a foundation for a custom server that requires authorization to download an update.
 

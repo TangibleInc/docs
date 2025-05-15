@@ -14,6 +14,75 @@ Many of these were refactored from the deprecated [plugin framework v2](https://
 
 Git repository: https://github.com/tangibleinc/framework
 
+## Install
+
+Add as a production dependency in `tangible.config.js`.
+
+```js
+export default {
+  install: [
+    {
+      git: 'git@github.com:tangibleinc/framework',
+      dest: 'vendor/tangible/framework',
+      branch: 'main',
+    },
+  ]
+}
+```
+
+Run `npm run install` or `npx roll install`.
+
+Alternatively, add in `composer.json` and run `composer update`.
+
+```json
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:tangibleinc/framework"
+    }
+  ],
+  "require": {
+    "tangible/framework": "dev-main"
+  },
+  "minimum-stability": "dev"
+}
+```
+
+## Use
+
+After loading the framework, its newest version instance is ready on `plugins_loaded` action.
+
+```php
+use tangible\framework;
+
+require_once __DIR__ . '/vendor/tangible/framework/index.php';
+
+add_action('plugins_loaded', function() {
+
+  // Newest version of Framework is ready
+
+});
+```
+
+### Note on plugin activation
+
+During plugin activation, such as after install or update, WordPress runs the `plugins_loaded` action *before* loading plugins and modules, short-circuiting the version comparison logic. This can cause an older version of a module to load with missing features.
+
+It is recommended to check for the constant `WP_SANDBOX_SCRAPING`, and skip loading the rest of the plugin when it's defined.
+
+```php
+if (defined('WP_SANDBOX_SCRAPING')) return;
+
+// ..Register with Framework and load the rest of plugin..
+```
+
+This guarantees the availability of the newest version of all modules. For more details, see:
+
+- https://developer.wordpress.org/reference/functions/register_activation_hook/#more-information
+- https://github.com/WordPress/wordpress-develop/blob/8a52d746e9bb85604f6a309a87d22296ce1c4280/src/wp-admin/includes/plugin.php#L2381C10-L2381C31
+
+
 ## Modules
 
 - [Admin](admin)
@@ -91,7 +160,7 @@ npm run format [module1 module2..]
 Start a local dev site using [`wp-now`](https://github.com/WordPress/playground-tools/blob/trunk/packages/wp-now/README.md).
 
 ```sh
-npm run start
+npm run now
 ```
 
 Press CTRL + C to stop.
@@ -131,17 +200,17 @@ This plugin comes with a suite of unit and integration tests.
 The test environment is started by running:
 
 ```sh
-npm run env:start
+npm run start
 ```
 
-This uses [`wp-env`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/) to quickly spin up a local dev and test environment, optionally switching between multiple PHP versions. It requires **Docker** to be installed. There are instructions available for installing Docker on [Windows](https://docs.docker.com/desktop/install/windows-install/), [macOS](https://docs.docker.com/desktop/install/mac-install/), and [Linux](https://docs.docker.com/desktop/install/linux-install/).
+This uses [`wp-env`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/) to set up a local dev and test site, optionally switching between multiple PHP versions. It requires **Docker** to be installed. There are instructions available for installing Docker on [Windows](https://docs.docker.com/desktop/install/windows-install/), [macOS](https://docs.docker.com/desktop/install/mac-install/), and [Linux](https://docs.docker.com/desktop/install/linux-install/).
 
 Visit [http://localhost:8888](http://localhost:8888) to see the dev site, and [http://localhost:8889](http://localhost:8880) for the test site, whose database is cleared on every run.
 
 Before running tests, install PHPUnit as a dev dependency using Composer inside the container.
 
 ```sh
-npm run env:composer:install
+npm run composer:install
 ```
 
 Composer will add and remove folders in the `vendor` folder, based on `composer.json` and `composer.lock`. If you have any existing Git repositories, ensure they don't have any work in progress before running the above command.
@@ -149,14 +218,14 @@ Composer will add and remove folders in the `vendor` folder, based on `composer.
 Run the tests:
 
 ```sh
-npm run env:test
+npm run test
 ```
 
 For each PHP version:
 
 ```sh
-npm run env:test:7.4
-npm run env:test:8.2
+npm run test:7.4
+npm run test:8.2
 ```
 
 The version-specific commands take a while to start, but afterwards you can run `npm run env:test` to re-run tests in the same environment.
@@ -164,7 +233,7 @@ The version-specific commands take a while to start, but afterwards you can run 
 To stop the Docker process:
 
 ```sh
-npm run env:stop
+npm run stop
 ```
 
 To remove Docker containers, volumes, images associated with the test environment.

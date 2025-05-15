@@ -172,7 +172,7 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
       // https://prismjs.com/#supported-languages
-      additionalLanguages: ['bash', 'ini']
+      additionalLanguages: ['bash', 'ini', 'php']
     },
   } satisfies Preset.ThemeConfig,
 };

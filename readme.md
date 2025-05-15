@@ -1,1 +1,1 @@
-docs/pages/projects/docs.md
+docs/pages/modules/docs.md

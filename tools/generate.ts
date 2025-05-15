@@ -34,25 +34,19 @@ import { globby } from 'globby'
         ],
       })
     ),
-    // Projects
-    ...['design', 'create', 'now', 'pipeline', 'roller', 'update-server'].map(
-      (name) => ({
-        name,
-        files: [
-          {
-            src: 'readme.md',
-            dest: `projects/${name}`,
-          },
-        ],
-      })
-    ),
     // Modules - Shared features for plugins
     ...[
-      'fields',
+      'create',
+      'design',
       // 'fields-pro',
+      'fields',
       'framework',
-      'template-system',
+      'now',
+      'pipeline',
+      'roller',
       // 'template-system-pro',
+      'template-system',
+      'update-server',
       'updater',
     ].map((name) => ({
       name,
@@ -72,6 +66,10 @@ import { globby } from 'globby'
                 ? [
                     {
                       src: 'modules/*/readme.md',
+                      dest: `modules/${name}`,
+                    },
+                    {
+                      src: 'elandel/*/readme.md',
                       dest: `modules/${name}`,
                     },
                     {
@@ -126,7 +124,9 @@ import { globby } from 'globby'
         // Add header comment
 
         const targetFilePath = path.join(docsPagesPath, targetFile)
-        const content = await fs.readFile(srcFile, 'utf8')
+        const content = (await fs.readFile(srcFile, 'utf8'))
+          // Patch links
+          .replace(`/reference/template-system`, `/modules/template-system`)
 
         /**
          * Provide default title, otherwise Docusaurus will make it "index"

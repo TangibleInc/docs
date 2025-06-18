@@ -91,7 +91,7 @@ const config: Config = {
 
   themeConfig: {
     colorMode: {
-      defaultMode: 'dark', // 'light'
+      defaultMode: 'light', // 'light'
     },
     image: 'img/logo.png',
     navbar: {

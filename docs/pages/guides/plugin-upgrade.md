@@ -2,7 +2,7 @@
 
 **Prerequisites**: [Git](https://git-scm.com/), [Node](https://nodejs.org/), [Docker](https://docs.docker.com/engine/), [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell))-compatible shell - See [Setup](/setup)
 
-Here are the steps to upgrade an existing plugin with the common setup used by all new plugins.
+Here are the steps to upgrade an existing plugin to the common setup used by all new plugins.
 
 - Create GitHub repository
 - Basic setup: Copy common files from example plugin
@@ -118,7 +118,7 @@ In the new setup, Composer is only used for dev dependencies needed for testing.
 }
 ```
 
-Define other vendor dependencies in `tangible.config.js` to be installed and updated by Roller. Example:
+Define other vendor dependencies in `tangible.config.js`. Example:
 
 ```js
 {
@@ -137,9 +137,7 @@ Define other vendor dependencies in `tangible.config.js` to be installed and upd
 }
 ```
 
-These are managed by Roller.
-
-To install dependencies, run `npm install` which runs the `postinstall` script that calls `roll install`. Or run directly as `npx roll install`, after NPM packages are installed.
+These are managed by [Roller](#assets-bundler). To install dependencies, run `npm install` which runs the `postinstall` script that calls `roll install`. Or run directly as `npx roll install`, after NPM packages are installed.
 
 To update dependencies, run `npm run update` which calls `roll update`. Or run directly as `npx roll update`.
 

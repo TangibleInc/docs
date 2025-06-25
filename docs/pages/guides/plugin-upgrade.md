@@ -12,7 +12,7 @@ Here are the steps to upgrade an existing plugin to the common setup used by all
 - Upgrade Framework
 - Upgrade Build Pipeline
 - Upgrade Assets Bundler
-- Code formatter using Roller (CSS, Sass, JavaScript, TypeScript) and [PHP Beautify](https://github.com/TangibleInc/php-beautify)
+- Code formatter using Roller (CSS, Sass, JavaScript, TypeScript) and PHP Beautify
 
 ## Git repository
 
@@ -348,3 +348,17 @@ The section [Comparison with Tangible Builder](/modules/roller/#comparison-with-
 Read the documentation for Roller's [Format command](/modules/roller/#format).
 
 In the build configuration file `tangible.config.js`, the `format` property defines file patterns to be formatted. Update to match the existing folder structure.
+
+Install [PHP Beautify](https://github.com/TangibleInc/php-beautify). This is used by Roller to lint and format PHP files.
+
+```sh
+npm install --save @tangible/php-beautify
+```
+
+Run the formatter. This could change many files, so commit any unrelated changes beforehand.
+
+```sh
+npm run format
+```
+
+Or directly with `npx roll format`.

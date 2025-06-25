@@ -143,12 +143,16 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'doc',
-          id: 'guides/types-of-documentation',
-          label: 'Types of documentation',
+          id: 'guides/plugin-upgrade',
         },
         {
           type: 'doc',
           id: 'guides/github-pages',
+        },
+        {
+          type: 'doc',
+          id: 'guides/types-of-documentation',
+          label: 'Types of documentation',
         },
       ],
     },

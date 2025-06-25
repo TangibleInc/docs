@@ -5,17 +5,17 @@
 Here is an example of a local development setup.
 
 - Laptop with at least 16GB memory
-- Operating system: Linux, macOS, or Windows Subsystem for Linux (WSL)
-- Browser: [Firefox](https://www.mozilla.org/en-US/firefox/new/), Safari, or Chrome/Chromium
-- Editor: [Visual Studio Code](https://code.visualstudio.com/), Vim, or Emacs
+- Operating system: GNU/Linux, macOS, Windows Subsystem for Linux (WSL)
+- Browser: [Firefox](https://www.mozilla.org/en-US/firefox/new/), Chromium, Safari 
+- Editor: [Visual Studio Code](https://code.visualstudio.com/), Vim, Emacs
 - Git GUI: [Source Git](https://sourcegit-scm.github.io/)
 
 ## Prepare
 
 The following software is required for the projects in the documentation.
 
-- [Node](https://nodejs.org) - JavaScript runtime (version 20 and above)
 - [Git](https://git-scm.com/) - Version control system
+- [Node](https://nodejs.org) - JavaScript runtime (version 20 and above)
 
 Optionally, some projects or tasks may depend on:
 

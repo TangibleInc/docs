@@ -308,7 +308,7 @@ Replace all occurences of `tgbl`, `tangible_plugin_framework`, and `$framework`.
 Search for a keyword in the codebase.
 
 ```sh
-grep -R framework
+grep -Rn --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=publish --exclude-dir=vendor framework
 ```
 
 Example of old framework usage.
@@ -362,3 +362,39 @@ npm run format
 ```
 
 Or directly with `npx roll format`.
+
+## Private repositories
+
+For projects with dependencies that are private repositories, it's necessary to set up a secret token to authenticate Git.
+
+- Create a [fine-grained personal token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token)
+  - Go to developer settings, select Personal Access Tokens, then Fine-grained tokens.
+  - Click "Generate new token"
+  - Change the resource owner to the organization `TangibleInc`
+  - Allow cloning all repositories inside your github action.
+- Add this token as a repository-level secret
+  - Go to repository's Settings -> Security -> Secrets and variables -> Actions
+  - Add a new repository secret with the name `TANGIBLE_PIPELINE_ACCESS_TOKEN`
+  - The value is the newly generated personal token
+- Pass the token in GitHub Actions, for example `.github/workflows/release.yml`
+
+```yml
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      ACCESS_TOKEN: ${{ secrets.TANGIBLE_PIPELINE_ACCESS_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+      - name: Install dependencies
+        run: |
+          echo "https://TangibleInc:$ACCESS_TOKEN@github.com" >> $HOME/.git-credentials
+          git config --global credential.helper store
+          bun install
+          rm -rf ${HOME}/.git-credentials
+```

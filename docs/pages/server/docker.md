@@ -1,6 +1,17 @@
 # Docker
 
-[Docker](https://docs.docker.com/engine/install/) is used to manage containers, which are isolated virtual environments for running software.
+[Docker](https://docker.com) is used to manage containers, which are isolated virtual environments for running software stacks.
+
+## Install
+
+Install Docker Engine by following the [install instructions](https://docs.docker.com/engine/install/).
+
+For Windows and macOS, you can install Docker Desktop (GUI app) which includes the engine; or choose a more technical way to install the engine by itself.
+
+- [Docker on Windows WSL2 without Docker Desktop](https://rmauro.dev/run-docker-on-wsl2-without-docker-desktop/)
+- [How to use docker engine without Docker Desktop on macOS with Colima](https://aalonso.dev/blog/2024/how-to-use-docker-engine-without-docker-desktop-macos-colima)
+
+There are other container solutions, such as Podman and Apple's Container.
 
 ## Commands
 

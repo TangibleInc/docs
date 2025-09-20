@@ -106,7 +106,7 @@ If copying from the example plugin, update the file contents as needed. Examples
 
 ## Vendor dependencies
 
-In the new setup, Composer is only used for dev dependencies needed for testing.
+In the new setup, by default Composer is only used for dev dependencies needed for testing.
 
 ```json
 {

@@ -303,7 +303,7 @@ Read the documentation for the [Framework](/modules/framework) and its [Plugin m
 
 Here are the main points of upgrading from Framework [v2](https://bitbucket.org/tangibleinc/tangible-plugin-framework) to [v3](https://github.com/TangibleInc/framework/).
 
-Replace all occurences of `tgbl`, `tangible_plugin_framework`, and `$framework`.
+Replace all occurrences of `tgbl`, `tangible_plugin_framework`, and `$framework`.
 
 Search for a keyword in the codebase.
 

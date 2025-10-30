@@ -231,18 +231,6 @@ Install dev dependencies like third-party plugins.
 npm run install:dev
 ```
 
-### wp-now
-
-Start a quick dev site using [`wp-now`](https://github.com/WordPress/playground-tools/blob/trunk/packages/wp-now/README.md).
-
-```sh
-npm run now
-```
-
-The default user is `admin` with `password`. Press CTRL + C to stop.
-
-This environment is meant as a temporary playground. It uses PHP-WASM which is more convenient and faster to start than Docker, but it's a bit experimental and may not be fully compatible with a normal PHP install.
-
 ### wp-env
 
 Start a proper dev site using [`wp-env`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env).

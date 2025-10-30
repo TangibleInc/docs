@@ -147,6 +147,10 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
+          id: 'guides/main-branch',
+        },
+        {
+          type: 'doc',
           id: 'guides/github-pages',
         },
         {

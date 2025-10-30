@@ -47,6 +47,8 @@ Rename main branch from "master" to "main".
 git branch -M main
 ```
 
+For existing projects, see the guide [Rename default branch to `main`](main-branch).
+
 Push to remote `origin`, setting it as the upstream of main branch.
 
 ```sh

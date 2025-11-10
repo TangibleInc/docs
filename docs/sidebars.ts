@@ -151,6 +151,10 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
+          id: 'guides/cloudflare-pages',
+        },
+        {
+          type: 'doc',
           id: 'guides/github-pages',
         },
         {

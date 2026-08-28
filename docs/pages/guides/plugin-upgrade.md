@@ -362,6 +362,10 @@ For projects with dependencies that are private repositories, it's necessary to 
   - Click "Generate new token"
   - Change the resource owner to the organization `TangibleInc`
   - Allow cloning all repositories inside your github action.
+  - In the repository part of the Permissions section, add the following:
+    - Contents: Read-only
+    - Custom properties: Read-only
+    - Metadata: Read-only
 - Add this token as a repository-level secret
   - Go to repository's Settings -> Security -> Secrets and variables -> Actions
   - Add a new repository secret with the name `TANGIBLE_PIPELINE_ACCESS_TOKEN`

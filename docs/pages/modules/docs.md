@@ -1,5 +1,5 @@
 # Docs
 
-Website: https://docs.tangible.one
+Website: https://developer.teamtangible.com/
 
 Repository: https://github.com/tangibleinc/docs
